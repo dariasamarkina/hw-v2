@@ -91,6 +91,5 @@ export function renderLoginForm ({ container, setToken, startPage}) {
             }   
         }) 
     }
-
     renderForm();
 }

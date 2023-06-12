@@ -5,11 +5,8 @@
 // import { loadingMessage } from "./script.js";
 import { formatDate } from "./format-date.js";
 import { renderComments } from "./script.js";
-// import { renderComments } from "./script.js";
 
 export let appComments = [];
-
-
 
 export function getData( { token }) {
 
