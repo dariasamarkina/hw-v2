@@ -5,7 +5,7 @@ import { renderLoginForm } from "./components/login-component.js";
 // import { appComments } from "./api.js";
 import { initLikesButton } from "./like-button.js";
 // import { addReply } from "./add-reply.js";
-
+import { format } from "date-fns";
 import { formatDate } from "./format-date.js";
 
 const container = document.querySelector('.container');
@@ -24,6 +24,8 @@ export const renderComments = (comm) => {
     }
 
     const commentsHtml = comm.map((comment, index) => {
+        const createDate = format(new Date(comment.date), 'yyyy-mm-dd hh.mm.ss');
+
         return `
         <li class="comment" data-index="${index}">
         <div class="comment-header">
@@ -31,7 +33,7 @@ export const renderComments = (comm) => {
                 .replaceAll("<", "&lt;")
                 .replaceAll(">", "&gt;")
                 .replaceAll('"', "&quot;")} </div>
-            <div>${comment.date} </div>
+            <div>${createDate} </div>
         </div>
         <div class="comment-body"> 
             <div class="comment-text">
