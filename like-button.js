@@ -1,4 +1,3 @@
-
 import { renderComments } from "./script.js";
 import { appComments } from "./api.js";
 
